@@ -6,7 +6,7 @@ const Services = () => {
     const products = useLoaderData()
     console.log(products);
     return (
-        <div className='lg:grid lg:grid-cols-2 w-[90%] mx-auto '>
+        <div className='lg:grid lg:grid-cols-3 w-[95%] mx-auto my-10 '>
             {
                 products.map(product=><Card product={product} key={product._id}></Card>)
             }
