@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({dnt}) => {
-    const {_id,name,img}=dnt
+const Card = ({product}) => {
+    const {name,description,price,_id,img}=product
     return (
         <div>
-            <div className="card lg:w-96 w-50 bg-blue-600 shadow-xl mt-10">
+            <div className="card lg:w-96 w-50 lg:h-[300px]shadow-xl bg-cyan-600 mt-10">
                 <figure className="px-10 pt-10">
-                    <img src={img} alt="Shoes" className=" w-50 h-50" />
+                    <img src={img} alt="Shoes" className=" w-[300px] h-[170px]  lg:w-[400px] lg:h-[180px]" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p className="card-text">{price}</p>
+                    <p>{description.slice(0,100)}...</p>
+
                     <div className="card-actions">
-                       <Link to={`/checkout/${_id}`} className='btn btn-primary'> Donate Now</Link>
+                       <Link to={`/details/${_id}`} className='btn btn-primary'> Donate Now</Link>
                     </div>
                 </div>
             </div>

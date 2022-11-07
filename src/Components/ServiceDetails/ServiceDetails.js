@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Checkout = () => {
+const ServiceDetails = () => {
     return (
         <div>
-          grewgwergerg
+            
         </div>
     );
 };
 
-export default Checkout;
+export default ServiceDetails;

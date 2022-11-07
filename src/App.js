@@ -4,12 +4,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import { Authcontex } from './AllContex/Usercontex';
 import './App.css';
 
-import Checkout from './Components/Checkout/Checkout';
+
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Main from './Components/Main/Main';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Profile from './Components/Profile/Profile';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import Services from './Components/Services/Services';
 import SingUp from './Components/SingUp/SingUp';
 
 function App() {
@@ -24,7 +26,11 @@ function App() {
      
         {path:'/login', element:<Login/>},
         {path:'/signup', element:<SingUp/>},
-        { path:'checkout/:id', element:<PrivateRoute><Checkout/></PrivateRoute>}
+        {path:'/services', element:<Services/>, 
+       loader:()=>fetch('http://localhost:5000/services')},
+        {path:'/details/:id', element:<ServiceDetails/>},
+       
+
       ] },
   ])
   return (
