@@ -41,7 +41,7 @@ const Home = () => {
         }
       </div>
         <div className=''> 
-        <Link to={'/Services'} className='btn btn-outline w-[90%] mx-auto ml-[5%] my-10 border-dashed'> See All </Link>
+        <Link to={'/Services'} className='btn btn-outline w-[90%] mx-auto ml-[5%] my-10 border-dashed hover:rounded-full'> See All </Link>
         </div>
       </section>
     </div>

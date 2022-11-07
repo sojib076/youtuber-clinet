@@ -20,15 +20,17 @@ function App() {
       { path: '/', element: <Main />,children:[
         { path: '/', element: <Home /> },
         { path: 'home', element: <Home /> ,
-        
       },
-        {path:'/profile', element:<Profile/>},
+        {path:'/profile', element:<PrivateRoute><Profile/></PrivateRoute>},
      
         {path:'/login', element:<Login/>},
         {path:'/signup', element:<SingUp/>},
         {path:'/services', element:<Services/>, 
        loader:()=>fetch('http://localhost:5000/services')},
-        {path:'/details/:id', element:<ServiceDetails/>},
+
+        {path:'/details/:id', element:<ServiceDetails/>,
+        loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)},
+      
        
 
       ] },

@@ -18,7 +18,7 @@ const Card = ({ product }) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <p className="card-text"> ${price}</p>
-                    <p>{description.slice(0, 100)}...</p>
+                    <p className='text-ellipsis'>{description.slice(0, 100)}...</p>
 
                     <div className="card-actions">
                         <Link to={`/details/${_id}`} className='btn btn-primary'> Details</Link>
