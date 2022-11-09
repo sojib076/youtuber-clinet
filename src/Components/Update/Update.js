@@ -4,6 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import DynamicTitle from '../../Hook/DynamicTitle';
 
 const Update = () => {
+    // DynamicTitle('')
     DynamicTitle(' Update ')
     const notify = (info) => toast(info);
     const loader = useLoaderData()
@@ -14,7 +15,7 @@ const Update = () => {
     const blur = (info) => {
         setupdate(info.target.value)
     }
-
+/// this handel update
     const handelupdate = (id) => {
         fetch(`https://youtuber-server-sojib076.vercel.app/reviews/${id}`, {
             method: 'PATCH',
@@ -30,7 +31,7 @@ const Update = () => {
                 }
             })
     }
-    
+    // This is the for the update form
     return (
         <div>
             <div >

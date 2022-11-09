@@ -45,7 +45,7 @@ const Login = () => {
 
     }
 
- 
+ //google login
     const hadelgoogle = () => {
         googleloign().then(result =>{ 
             const loginuser = result.user.email;

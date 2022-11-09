@@ -1,12 +1,12 @@
 import React from 'react';
+import DynamicTitle from '../../Hook/DynamicTitle';
 
 const Blog = () => {
+    DynamicTitle('Blog')
     return (
         <div>
-            {/* 
+            <h1>Blog</h1>
 
-
-*/}
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     Difference between SQL and NoSQL?

@@ -57,6 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       {/* Service I Have  */}
       <section >
         <div className='lg:grid lg:grid-cols-3 w-[95%] mx-auto'>
