@@ -76,7 +76,7 @@ const Home = () => {
           <video src={video} autoPlay muted controlsList='nodownload' loop  >
           </video>
           <div className="content p-5">
-            <h1 className='text-5xl text-black' > Who  am I ??</h1>
+            <h1 className='text-5xl text-black' > Who  am I?</h1>
             <>
               <AutoTyping
                 active // <boolean>
