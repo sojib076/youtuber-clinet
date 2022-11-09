@@ -27,7 +27,7 @@ const Header = () => {
                                 user?.email ? <li onClick={logout}> <Link className='btn btn-warning text-gray-800'>Logout</Link></li> : <li> <Link to={'/signup'}>SingUp</Link></li>
                             }
                             {
-                                user?.email ? <li> <Link to={'/profile'}>Profile</Link></li> : <li> <Link to={'/login'}>Login</Link></li>
+                                user?.email ? <li> <Link to={'/myreviews'}>My Reviews</Link></li> : <li> <Link to={'/login'}>Login</Link></li>
                             }
                         </ul>
                     </div>
@@ -42,7 +42,10 @@ const Header = () => {
                             user?.email ? <li onClick={logout}> <Link className='btn btn-warning text-gray-800'>Logout</Link></li> : <li> <Link to={'/signup'}>SingUp</Link></li>
                         }
                         {
-                            user?.email ? <li> <Link to={'/profile'}>Profile</Link></li> : <li> <Link to={'/login'}>Login</Link></li>
+                            user?.email ? <li> <Link to={'/myreviews'}>My Reviews</Link></li> : <li> <Link to={'/login'}>Login</Link></li>
+                        }
+                        {
+                            user?.email && <li> <Link to={'/addproduct'}>Add Product</Link></li> 
                         }
 
                     </ul>

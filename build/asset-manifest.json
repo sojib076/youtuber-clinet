@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e9b40b9.css",
-    "main.js": "/static/js/main.702619d6.js",
+    "main.css": "/static/css/main.3ccac482.css",
+    "main.js": "/static/js/main.fcfd686c.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Sign up-amico.png": "/static/media/Sign up-amico.89aaf70d9ccc4624d551.png",
+    "static/media/lv_0_20221108015852.mp4": "/static/media/lv_0_20221108015852.2f454a063af07d8359d2.mp4",
+    "static/media/Discount-cuate.png": "/static/media/Discount-cuate.50a818863a84a0c3e665.png",
+    "static/media/Mobile Marketing-bro.png": "/static/media/Mobile Marketing-bro.6c9e0032e400e259a42d.png",
+    "static/media/Sync-pana.png": "/static/media/Sync-pana.9306ea999231d6b1ac1c.png",
     "index.html": "/index.html",
-    "main.0e9b40b9.css.map": "/static/css/main.0e9b40b9.css.map",
-    "main.702619d6.js.map": "/static/js/main.702619d6.js.map",
+    "main.3ccac482.css.map": "/static/css/main.3ccac482.css.map",
+    "main.fcfd686c.js.map": "/static/js/main.fcfd686c.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e9b40b9.css",
-    "static/js/main.702619d6.js"
+    "static/css/main.3ccac482.css",
+    "static/js/main.fcfd686c.js"
   ]
 }

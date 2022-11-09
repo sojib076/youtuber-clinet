@@ -1,16 +1,18 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
+import Loading from '../Loading/Loading';
 
 
-const PrivateRoute = ({Children}) => {
+const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(Authcontex)
     const location = useLocation()
         if (loading) {
-            return <div> loading</div>
+            return <Loading color={'#ebb734'} type={'spin'}> </Loading>
         }
-    if (user?.email) {
-        return Children
+
+    if (user) {
+        return children
     } 
    return <Navigate to="/login" state={{ from: location }} replace />;
         
