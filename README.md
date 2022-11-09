@@ -12,6 +12,7 @@ what I use to build this site
  * Express
 * Nodejs
 * tostify
+*
 
 Website Features :
 * Responsive
@@ -21,3 +22,4 @@ Website Features :
 * User can see his review
 * Admin can add a service
 * User  can delete a service & Update a Review
+* Admin can delete a service & Update a Review
