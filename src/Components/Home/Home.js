@@ -115,7 +115,7 @@ const Home = () => {
          <img src={discount} alt="" srcset="" />
         </div>
          <div className='col-span-2 justify-center'> 
-            <h1 className=' lg:text-4xl text-center text-black'> Buy Now to Get Dicount </h1>
+            <h1 className=' lg:text-4xl text-center text-black font-serif'> Buy Now to Get Dicount </h1>
             <p className='text-2xl text-center text-black'> 50% dicount on all services </p>
             <Link to={'/Services'} className='btn btn-accent w-[90%] mx-auto ml-[5%] my-10 border-dashed hover:rounded-full'> See All </Link>
             <p className='text-center lg:text-3xl text-blue-600'> 
