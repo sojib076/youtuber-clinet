@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Form, Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
 import Reviews from './Reviews';
 
 const ServiceDetails = () => {
     const servicedata = useLoaderData()
-    const { user, loading } = useContext(Authcontex)
+    const { user } = useContext(Authcontex)
   
      const [reviews,setReviews] = useState([])
 

@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Authcontex } from '../../AllContex/Usercontex';
+import React from 'react';
+
 
 const Reviews = ({ rev }) => {
     const { email, img, name, review } = rev

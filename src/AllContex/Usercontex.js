@@ -4,6 +4,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 import app from '../firebase/firebase.init';
 
 
+const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
 export const Authcontex = createContext()
 
@@ -13,7 +14,6 @@ export const Authcontex = createContext()
 // this contain all the data that we want to share with other components
 
 
-const provider = new GoogleAuthProvider();
 const Usercontex = ({ children }) => {
 
 
@@ -25,11 +25,10 @@ const Usercontex = ({ children }) => {
 
         return createUserWithEmailAndPassword(auth, email, password)
     }
-
+    
     function login(email, password) {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
-
     }
     const googleloign = () => {
         signInWithPopup(auth, provider)

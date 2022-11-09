@@ -3,18 +3,21 @@ import { Authcontex } from '../../AllContex/Usercontex';
 import Reviewcard from './Reviewcard';
 import { ToastContainer, toast } from 'react-toastify';
 const Myreviews = () => {
-    const [update, setupdate] = useState('')
-    const notify = (info) => toast(info);
 
-    const { user,loading } = useContext(Authcontex)
+    const notify = (info) => toast(info);
+    const { user } = useContext(Authcontex)
  
     const [reviews, setreviews] = useState([])
 
     useEffect(() => {
-        fetch(`https://youtuber-server-ten.vercel.app/userreviews?email=${user?.email}`)
+        fetch(`https://youtuber-server-ten.vercel.app/userreviews?email=${user?.email}`,{
+            headers: { 
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setreviews(data))
-    }, [update])
+    }, [user?.email])
 
     const handeldelt = (id) => {
         fetch(`https://youtuber-server-ten.vercel.app/reviews/${id}`, {
@@ -34,32 +37,16 @@ const Myreviews = () => {
     }
 
 
-    function handelblur(data) {
-        setupdate(data.target.value);
-    }
 
-    const handelupdate = (id) => {
-        fetch(`https://youtuber-server-sojib076.vercel.app/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ "review": update })
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result) {
-                    notify('Updated Successfully')
-                }
-            })
-    }
-
+    
     return (
-        <div className='lg:grid lg:grid-cols-3'>
+        <div>
             {
                 reviews?.length === 0 ?
-                    <div className='text-center text-4xl text-red-500'>No Reviews Found</div> :
-                    reviews.map(Review => <Reviewcard Review={Review} handeldelt={handeldelt} handelblur={handelblur} handelupdate={handelupdate}></Reviewcard>)
+                    <div className='text-center text-4xl text-red-500 '>No Reviews Found</div> :
+                    <div className='lg:grid lg:grid-cols-3 grid grid-cols-1'> 
+                       { reviews.map(Review => <Reviewcard Review={Review} handeldelt={handeldelt}></Reviewcard>)}
+                    </div>
             }
             <ToastContainer />
         </div>

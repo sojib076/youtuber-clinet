@@ -27,7 +27,7 @@ const Home = () => {
           <div className="hero lg:h-[85vh] ">
             <div className="hero-content text-center">
               <div className="">
-                <h1 className="text-5xl font-bold text-red-800">Promote With Me </h1>
+                <h1 className="text-5xl font-bold text-emerald-700">Promote With Me </h1>
                 <div>
                 <>
               <AutoTyping
@@ -40,7 +40,7 @@ const Home = () => {
                 deleteSpeed={150} // <number>
                 delayToWrite={1000} // <number>
                 delayToDelete={2000} // <number>
-              className=" text-3xl my-5 font-bold text-green-900 shadow-2xl shadow-black" />
+              className=" text-3xl my-5 font-bold text-fuchsia-500 shadow-2xl shadow-black" />
               <BlinkCursor
                 active // <boolean>
                 blinkSpeed={500} // <number>

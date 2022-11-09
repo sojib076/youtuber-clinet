@@ -2,10 +2,11 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
+import DynamicTitle from '../../Hook/DynamicTitle';
 import loginimg from '../video/Sync-pana.png'
 
 const Login = () => {
-     
+    DynamicTitle('Login')
     const {login,googleloign} = useContext(Authcontex)
     let navigate = useNavigate();
     let location = useLocation();
@@ -20,9 +21,23 @@ const Login = () => {
         const email = e.target.email.value
         const password = e.target.password.value
 
-        login(email,password).then(result=>{         
-                navigate(from, { replace: true });
-               
+        login(email,password)
+        .then(result=>{     
+                //get jwt token
+                const loginuser = result.user.email;
+                //set token in local storage
+                fetch('http://localhost:5000/jwt',{
+                    method:'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({loginuser})
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data);
+                    localStorage.setItem('token',data.token)
+                })
+
+            navigate(from, { replace: true });    
         })
         .then(error=>{
             console.log(error);
@@ -32,8 +47,18 @@ const Login = () => {
 
  
     const hadelgoogle = () => {
-        googleloign()
-        .then(result =>{ 
+        googleloign().then(result =>{ 
+            const loginuser = result.user.email;
+            fetch('http://localhost:5000/jwt',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({loginuser})
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+                localStorage.setItem('token',data.token)
+            })
           navigate(from, { replace: true });
         })
         

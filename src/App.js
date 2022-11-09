@@ -15,6 +15,11 @@ import Services from './Components/Services/Services';
 import SingUp from './Components/SingUp/SingUp';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Update from './Components/Update/Update';
+import { Authcontex } from './AllContex/Usercontex';
+import { useContext } from 'react';
+import Loading from './Components/Loading/Loading';
+import Blog from './Components/Blog/Blog';
 
 
 
@@ -42,14 +47,23 @@ function App() {
           loader: ({ params }) => fetch(`https://youtuber-server-ten.vercel.app/services/${params.id}`)
         },
         { path: '*', element: <h1>404 not found</h1> },
-        { path: '/addproduct', element: <PrivateRoute> <AddProduct /></PrivateRoute> }
+        { path: '/addproduct', element: <PrivateRoute> <AddProduct /></PrivateRoute> },
+          {
+            path:'/updateproduct/:id',element:<PrivateRoute><Update/></PrivateRoute>,
+            loader: ({ params }) => fetch(`https://youtuber-server-sojib076.vercel.app/reviews/${params.id}`)
 
-
-
+        }, {
+          path:'/blog', element:<Blog></Blog>
+        }
 
       ]
     },
   ])
+  const {loading} = useContext(Authcontex)  
+  if (loading) {
+    return <Loading color={'#ebb734'} type={'spin'}> </Loading>
+}
+
   return (
     <RouterProvider router={route}>
         <ToastContainer />
