@@ -20,6 +20,7 @@ import { Authcontex } from './AllContex/Usercontex';
 import { useContext } from 'react';
 import Loading from './Components/Loading/Loading';
 import Blog from './Components/Blog/Blog';
+import Error from './Components/Error/Error';
 
 
 
@@ -46,7 +47,7 @@ function App() {
           path: '/details/:id', element: <ServiceDetails />,
           loader: ({ params }) => fetch(`https://youtuber-server-ten.vercel.app/services/${params.id}`)
         },
-        { path: '*', element: <h1>404 not found</h1> },
+        { path: '*', element: <Error /> },
         { path: '/addproduct', element: <PrivateRoute> <AddProduct /></PrivateRoute> },
           {
             path:'/updateproduct/:id',element:<PrivateRoute><Update/></PrivateRoute>,
