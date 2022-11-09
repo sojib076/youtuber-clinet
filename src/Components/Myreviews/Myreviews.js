@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Authcontex } from '../../AllContex/Usercontex';
 import Reviewcard from './Reviewcard';
 import { ToastContainer, toast } from 'react-toastify';
+import DynamicTitle from '../../Hook/DynamicTitle';
 const Myreviews = () => {
+    DynamicTitle('My Reviews')
 
     const notify = (info) => toast(info);
     const { user } = useContext(Authcontex)

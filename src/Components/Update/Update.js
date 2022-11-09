@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import DynamicTitle from '../../Hook/DynamicTitle';
 
 const Update = () => {
+    DynamicTitle(' Update ')
     const notify = (info) => toast(info);
     const loader = useLoaderData()
     console.log(loader);

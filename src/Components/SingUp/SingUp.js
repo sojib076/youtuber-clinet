@@ -3,8 +3,10 @@ import {Link, useNavigate } from 'react-router-dom';
 import signupimg from '../video/Sign up-amico.png'
 
 import { Authcontex } from '../../AllContex/Usercontex';
+import DynamicTitle from '../../Hook/DynamicTitle';
 
 const SingUp = () => {
+    DynamicTitle('SingUp')
     const navigate = useNavigate()
     const {createuser,googleloign,updateuser} = useContext(Authcontex)
     const handesingup =(e)=>{

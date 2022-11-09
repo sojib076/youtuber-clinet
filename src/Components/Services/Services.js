@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import DynamicTitle from '../../Hook/DynamicTitle';
 
 
 
 import Card from '../Home/Card';
 const Services = () => {
-
+        DynamicTitle(' Add A Services')
 
     const products = useLoaderData()
 
