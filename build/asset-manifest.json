@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b81f8dfe.css",
-    "main.js": "/static/js/main.3348c0d6.js",
+    "main.js": "/static/js/main.50260522.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Sign up-amico.png": "/static/media/Sign up-amico.89aaf70d9ccc4624d551.png",
     "static/media/lv_0_20221108015852.mp4": "/static/media/lv_0_20221108015852.2f454a063af07d8359d2.mp4",
@@ -15,11 +15,11 @@
     "static/media/Fast loading-rafiki.png": "/static/media/Fast loading-rafiki.044f43c1cbf739b8a70f.png",
     "index.html": "/index.html",
     "main.b81f8dfe.css.map": "/static/css/main.b81f8dfe.css.map",
-    "main.3348c0d6.js.map": "/static/js/main.3348c0d6.js.map",
+    "main.50260522.js.map": "/static/js/main.50260522.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b81f8dfe.css",
-    "static/js/main.3348c0d6.js"
+    "static/js/main.50260522.js"
   ]
 }

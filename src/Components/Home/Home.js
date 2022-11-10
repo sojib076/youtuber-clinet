@@ -26,7 +26,6 @@ const Home = () => {
     fetch(`https://youtuber-server-ten.vercel.app/service`)
       .then(res => res.json())
       .then(data => {
-
         setProducts(data)
       })
   }, [])

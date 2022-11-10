@@ -14,8 +14,8 @@ const AddProduct = () => {
             price: e.target.price.value,
             description: e.target.description.value,
             img: e.target.img.value,
+            myDate: new Date()
         }
-
         fetch('https://youtuber-server-sojib076.vercel.app/addservices', {
             method: 'POST',
             headers: {
