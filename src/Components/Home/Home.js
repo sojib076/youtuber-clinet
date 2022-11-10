@@ -136,13 +136,13 @@ const Home = () => {
             <div className='flex flex-col '>
    
               <div className='h-[250px] shadow-2xl shadow-black w-[99%] mx-auto p-3 '>
-                <h1 className='text-3xl text-black text-fuchsia-800 '> Dont Worry  About Your Promotion </h1>
-                <img src={Thinking} alt="" srcset="" className='h-[70%] w-[70%] ' />
+                <h1 className='text-3xl text-black text-fuchsia-800 '>Buy & see result </h1>
+                <img src={Running} alt="" srcset="" className='h-[70%] w-[70%] ' />
               </div>
         
               <div className='h-[250px] shadow-2xl shadow-black w-[99%] mx-auto mt-5  p-3'>
                 <h1 className='text-2xl text-black'> <span className='font-serif font-bold text-3xl'>Dont Worry </span> About Your Promotion </h1>
-                <img src={Running} alt="" srcset="" className='h-[70%] w-[70%] ' />
+                <img src={Thinking} alt="" srcset="" className='h-[70%] w-[70%] ' />
               </div>
    
             </div>
