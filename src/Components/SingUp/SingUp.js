@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {Link, useNavigate } from 'react-router-dom';
-import signupimg from '../video/Sign up-amico.png'
+import signupimg from '../Assests/Sign up-amico.png'
 
 import { Authcontex } from '../../AllContex/Usercontex';
 import DynamicTitle from '../../Hook/DynamicTitle';

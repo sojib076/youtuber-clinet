@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
 import DynamicTitle from '../../Hook/DynamicTitle';
-import loginimg from '../video/Sync-pana.png'
+import loginimg from '../Assests/Sync-pana.png'
 
 const Login = () => {
     DynamicTitle('Login')
