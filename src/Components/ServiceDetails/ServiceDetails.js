@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
 import Reviews from './Reviews';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ServiceDetails = () => {
-  
+    const notify = (info) => toast(info);
         
     
     const servicedata = useLoaderData()
@@ -30,8 +31,15 @@ const ServiceDetails = () => {
                 
             },
             body: JSON.stringify(data)
-        })
-        e.target.reset();
+        }).then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                   console.log(data);
+                   notify('Review Added')
+                    e.target.reset()
+                }
+            } )
+       
 
     }
 
@@ -106,6 +114,7 @@ const ServiceDetails = () => {
 
 
             </section>
+            <ToastContainer />
         </div>
     );
 };
