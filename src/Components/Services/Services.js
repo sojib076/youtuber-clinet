@@ -6,7 +6,7 @@ import DynamicTitle from '../../Hook/DynamicTitle';
 
 import Card from '../Home/Card';
 const Services = () => {
-        DynamicTitle(' Add A Services')
+        DynamicTitle(' Services')
 
     const products = useLoaderData()
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import { toast , ToastContainer } from 'react-toastify';
+import DynamicTitle from '../../Hook/DynamicTitle';
 
 
 const AddProduct = () => {
+    DynamicTitle('Add A Services')
     const notify = () => toast(" Product Added Successfully");
     const  handelsubmit = (e) => {
         e.preventDefault()
