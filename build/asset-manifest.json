@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf5c9fe8.css",
-    "main.js": "/static/js/main.3ec29c78.js",
+    "main.css": "/static/css/main.b81f8dfe.css",
+    "main.js": "/static/js/main.c9fbf00f.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Sign up-amico.png": "/static/media/Sign up-amico.89aaf70d9ccc4624d551.png",
     "static/media/lv_0_20221108015852.mp4": "/static/media/lv_0_20221108015852.2f454a063af07d8359d2.mp4",
+    "static/media/Writer's block-bro.png": "/static/media/Writer's block-bro.89f792afc08811a699e2.png",
     "static/media/Feeling angry-amico.png": "/static/media/Feeling angry-amico.5e94df2432850c499183.png",
     "static/media/Discount-cuate.png": "/static/media/Discount-cuate.50a818863a84a0c3e665.png",
     "static/media/Mobile Marketing-bro.png": "/static/media/Mobile Marketing-bro.6c9e0032e400e259a42d.png",
+    "static/media/Social interaction-bro.png": "/static/media/Social interaction-bro.13d27f44905fbcdb1cad.png",
+    "static/media/Social Growth-rafiki.png": "/static/media/Social Growth-rafiki.a5cb3eb87983867c7df3.png",
     "static/media/Sync-pana.png": "/static/media/Sync-pana.9306ea999231d6b1ac1c.png",
+    "static/media/Fast loading-rafiki.png": "/static/media/Fast loading-rafiki.044f43c1cbf739b8a70f.png",
     "index.html": "/index.html",
-    "main.cf5c9fe8.css.map": "/static/css/main.cf5c9fe8.css.map",
-    "main.3ec29c78.js.map": "/static/js/main.3ec29c78.js.map",
+    "main.b81f8dfe.css.map": "/static/css/main.b81f8dfe.css.map",
+    "main.c9fbf00f.js.map": "/static/js/main.c9fbf00f.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf5c9fe8.css",
-    "static/js/main.3ec29c78.js"
+    "static/css/main.b81f8dfe.css",
+    "static/js/main.c9fbf00f.js"
   ]
 }

@@ -48,7 +48,7 @@ const AddProduct = () => {
                     <input type="text" placeholder="Your Products description" className="input input-bordered" name='description' />
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-success">Login</button>
+                    <button className="btn btn-success">Add Service</button>
                 </div>
             </form>
             <ToastContainer />
