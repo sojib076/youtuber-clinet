@@ -21,7 +21,8 @@ const ServiceDetails = () => {
         const servicename = servicedata.name
         const img = user?.photoURL
         const email = user?.email
-        const data = { review, name, serviceid, email,img,servicename }
+        var myDate = new Date();
+        const data = { review, name, serviceid, email,img,servicename,myDate }
         // const userimg = user?.img
 
         fetch(`https://youtuber-server-ten.vercel.app/reviews`, {
@@ -52,8 +53,8 @@ const ServiceDetails = () => {
         .then(res=>res.json())
         .then(data=>
             {
-                const reverse = data.reverse()
-                setReviews(reverse)
+                
+                setReviews(data)
             })
       },[reviews])
 
