@@ -11,15 +11,22 @@ import discount from '../video/Discount-cuate.png'
 import Card from './Card';
 import { Link } from 'react-router-dom';
 import DynamicTitle from '../../Hook/DynamicTitle';
+import Loading from '../Loading/Loading';
 
 const Home = () => {
   DynamicTitle('Home')
   const [products, setProducts] = useState([])
+ 
   useEffect(() => {
     fetch(`https://youtuber-server-ten.vercel.app/service`)
       .then(res => res.json())
-      .then(data => setProducts(data))
+      .then(data => 
+        {
+          
+          setProducts(data)
+        })
   }, [])
+
 
   return (
 

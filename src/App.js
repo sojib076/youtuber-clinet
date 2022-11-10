@@ -40,7 +40,7 @@ function App() {
         { path: '/signup', element: <SingUp /> },
         {
           path: '/services', element: <Services />,
-          loader: () => fetch('https://youtuber-server-ten.vercel.app/services')
+
         },
 
         {
@@ -61,9 +61,7 @@ function App() {
     },
   ])
   const {loading} = useContext(Authcontex)  
-  if (loading) {
-    return <Loading color={'#ebb734'} type={'spin'}> </Loading>
-}
+
 
   return (
     <RouterProvider router={route}>
