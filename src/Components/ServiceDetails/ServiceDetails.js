@@ -4,6 +4,9 @@ import { Authcontex } from '../../AllContex/Usercontex';
 import Reviews from './Reviews';
 
 const ServiceDetails = () => {
+  
+        
+    
     const servicedata = useLoaderData()
     const { user } = useContext(Authcontex)
   
@@ -79,7 +82,7 @@ const ServiceDetails = () => {
 
                                     <textarea className="textarea textarea-bordered" placeholder="Type Review" name='review'></textarea>
                                     <div className="form-control mt-6 w-[50%]">
-                                        <button className="btn btn-primary">Submit</button>
+                                        <button className="btn btn-primary" >Submit</button>
                                     </div>
                                 </form>
                             </> : <>

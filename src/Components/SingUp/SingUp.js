@@ -8,7 +8,7 @@ import DynamicTitle from '../../Hook/DynamicTitle';
 const SingUp = () => {
     DynamicTitle('SingUp')
     const navigate = useNavigate()
-    const {createuser,googleloign,updateuser} = useContext(Authcontex)
+    const {createuser,updateuser,googleSignIn} = useContext(Authcontex)
     const handesingup =(e)=>{
         
         // prevent defaul
@@ -20,6 +20,19 @@ const SingUp = () => {
         
         createuser(email,password).then(result=>{
             updateuser(name,url)
+                   //get jwt token
+                   const loginuser = result.user.email;
+                   //set token in local storage
+                   fetch('https://youtuber-server-ten.vercel.app/jwt', {
+                       method: 'POST',
+                       headers: { 'Content-Type': 'application/json' },
+                       body: JSON.stringify({ loginuser })
+                   })
+                       .then(res => res.json())
+                       .then(data => {
+                           console.log(data);
+                           localStorage.setItem('token', data.token)
+                       })
             navigate('/')
         }).then(error=>{ 
             console.log(error);
@@ -27,10 +40,24 @@ const SingUp = () => {
 
 
     }
-    const handelgoogle = () => {
-        googleloign( ).then(result=>{ 
-            navigate('/')
-        })
+    const handlegooglelogin = () => {
+        googleSignIn()
+            .then(result => {
+                const loginuser = result.user.email;
+                //set token in local storage
+                fetch('https://youtuber-server-ten.vercel.app/jwt', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ loginuser })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('token', data.token)
+                    })
+
+                navigate('/')
+            })
     }
    
     return (
@@ -71,7 +98,7 @@ const SingUp = () => {
                                     <Link to={'/login'}> Have a account? <span className='text-cyan-600 text-2xl'>Login</span> </Link>
                                 </label>
                             </div>
-                                <button onClick={handelgoogle} className='btn btn-outline'> Sign with Google</button>
+                                <button onClick={handlegooglelogin} className='btn btn-outline'> Sign with Google</button>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary"> Sign Up</button>
                             </div>
