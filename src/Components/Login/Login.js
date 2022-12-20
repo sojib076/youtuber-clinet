@@ -1,5 +1,6 @@
 
 import React, { useContext } from 'react';
+import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontex } from '../../AllContex/Usercontex';
 import DynamicTitle from '../../Hook/DynamicTitle';
@@ -36,11 +37,19 @@ const Login = () => {
                         console.log(data);
                         localStorage.setItem('token', data.token)
                     })
-
+                 toast.success('Login Successfull');
                 navigate(from, { replace: true });
             })
-            .then(error => {
-                console.log(error);
+            .catch(error => {
+                console.log(error.code);
+                if (error.code === 'auth/wrong-password') {
+                    toast.error('Wrong password.');
+                }else if (error.code === 'auth/user-not-found') {
+                    toast.error('User not found.');}
+                else if (error.code === 'auth/invalid-email') {
+                    toast.error('That email address is invalid!');}
+                
+
             })
 
     }
@@ -71,31 +80,28 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div>
+                    <div className='h-[50]% w-[50%]'  >
                         <img src={loginimg} alt="Group-140" border="0" />
 
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl !bg-gray-700">
 
                         <form className="card-body" onSubmit={handelogin}>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
+            
                                 <input type="text" placeholder="email" className="input input-bordered" name='email' />
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
+                    
                                 <input type="text" placeholder="password" className="input input-bordered" name='password' />
                                 <label className="label">
                                     <Link to={'/signup'}> Create A Account?  </Link>
                                 </label>
                             </div>
-                            <button className='btn btn-outline' onClick={handlegooglelogin}>Login with Google</button>
-                            <div className="form-control mt-6">
+                            <div className="form-control ">
                                 <button className="btn btn-primary">Login</button>
+                            <button className='btn btn-outline mt-2' onClick={handlegooglelogin}>Login with Google</button>
+
                             </div>
                         </form>
                     </div>

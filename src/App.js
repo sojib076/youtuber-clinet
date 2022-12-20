@@ -21,7 +21,7 @@ import { useContext } from 'react';
 import Loading from './Components/Loading/Loading';
 import Blog from './Components/Blog/Blog';
 import Error from './Components/Error/Error';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -64,9 +64,13 @@ function App() {
 
 
   return (
-    <RouterProvider router={route}>
-        <ToastContainer />
-    </RouterProvider>
+<div> 
+<RouterProvider router={route}>
+       
+       </RouterProvider>
+       <ToastContainer />
+       <Toaster/>
+</div>
   );
 }
 
